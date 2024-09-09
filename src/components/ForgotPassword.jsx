@@ -8,7 +8,12 @@ function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://password-reset-app-backend.onrender.com/api/auth/forgot-password', { email });
+      const res = await axios.post('https://password-reset-app-backend.onrender.com/api/auth/forgot-password', { email },{
+        withCredentials: true, 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       setMessage(res.data.message);
     } catch (error) {
       setMessage(error.response ? error.response.data.message : 'Server error');
