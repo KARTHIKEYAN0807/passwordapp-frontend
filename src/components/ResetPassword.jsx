@@ -10,12 +10,7 @@ function ResetPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://password-reset-app-backend.onrender.com/api/auth/reset-password/${token}`, { password },{
-        // withCredentials: true, 
-        // headers: {
-          // 'Content-Type': 'application/json',
-        // },
-      });
+      const res = await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { password });
       setMessage(res.data.message);
     } catch (error) {
       setMessage(error.response.data.message);
