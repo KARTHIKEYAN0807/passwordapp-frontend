@@ -1,0 +1,5 @@
+/* 
+  Access-Control-Allow-Origin: https://passwordapp-backend.onrender.com
+  Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+  Referrer-Policy: strict-origin-when-cross-origin
