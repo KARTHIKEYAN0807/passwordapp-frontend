@@ -10,10 +10,10 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post('https://password-reset-app-backend.onrender.com/api/auth/register', { email, password },{
-        withCredentials: true, 
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // withCredentials: true, 
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
       });
       setMessage(res.data.message);
     } catch (error) {
